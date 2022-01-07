@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./Assets/Imgages/favicon (1).ico" sizes="16x16" type="image/png" data-rh="true">
         <title>Manthan Gaikwad</title>
 
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -13,7 +14,7 @@
         <!-- swiper -->
         <!-- <link rel="stylesheet" href="./Assets/css/swiper-bundle.min.css"> -->
         <!-- <script src="../Assets/script/main.js"></script> -->
-        <!-- <script src="./Assets/script/swiper-bundle.min.js"></script> -->
+        <script src="./Assets/script/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -37,10 +38,10 @@
                                                 <a href="#skills" class="nav__link">
                                                         <i class="uil uil-file-alt nav__icon"></i> Skills
                                                 </a>
-                                        </li>
+                                        </li>   
                                         <li class="nav__item">
-                                                <a href="#services" class="nav__link">
-                                                        <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                                                <a href="#education" class="nav__link">
+                                                        <i class="uil uil-briefcase-alt nav__icon"></i> Education
                                                 </a>
                                         </li>
                                         <li class="nav__item">
@@ -61,6 +62,11 @@
                                 <!-- <div>
                                  <i class="uil uil-moon change-theme" id="theme-button"></i>
                                 </div> -->
+                                <div class="about__buttons">
+                                        <a download="" href="./Assets/PDF/Manthan_Gaikwad.pdf" class="cv-btn">
+                                         Download CV  <i class="uil uil-download-alt "></i>
+                                        </a>
+                                </div>
                                 <div class="nav__toggle" id="nav-toggle">
                                         <i class="uil uil-apps"></i>
                                 </div>
@@ -105,7 +111,7 @@
                                         </div>
 
                                         <div class="home__data">
-                                                <h1 class="home__title">Hi, I'am Manthan</h1>
+                                                <h1 class="home__title">Hi,I'am Manthan</h1>
                                                 <h3 class="home__subtitle">Web Developer</h3>
                                                 <p class="home__discription">A Passionate aspiring Full Stack Developer skilled in MERN stack, moulded and shaped by Masai school’s intensive and immersive learning.  Look forward to joining a company where I will  be able to contribute towards individual and company growth.</p>
                                                 <a href="#contact" class="button button--flex">
@@ -274,7 +280,7 @@
                 </section>
 
                   <!-- ===================== QUALIFICATION ===================== -->
-                <section class="qualification section">
+                <section class="qualification section" id="education">
                           <h2 class="section__title">Qualification</h2>
                           <span class="section__subtitle">My personal jorney</span>
 
@@ -430,27 +436,27 @@
                                         <p class="project__description">
                                                 Porter is India's largest marketplace for intra-city logistics, porter enables companies and users to book minitrucks online and track the movement of their goods across the city.
                                         </p>
-                                        <a href="https://projectporterclone.netlify.app/" class="button button--flex button--small project__button">
+                                        <a href="https://projectporterclone.netlify.app/" target="_blank"class="button button--flex button--small project__button">
                                          Demo<i class="uil uil-arrow-right button__icon"></i>     
                                         </a>
                                 </div>
                            </div>
                            <!-- =====================  PROJECT 2 ===================== -->
                              <div class="project__content grid swiper-slide">
-                                <img src="./Assets/Imgages/Project Cultfit.png" alt="" class="project__img">
+                                <img src="./Assets/Imgages/Project Cultfit.png"  alt="" class="project__img">
                                 <div class="project__data">
                                         <h3 class="project__title">Clone of Cult.fit</h3>
                                         <p class="project__description">
                                                 Cult.fit is a chain of group workout fitness centres across Bengaluru, Hyderabad, Delhi and Gurugram. It comprises different workout formats such as Zumba, Yoga, Boxing, Strength & Conditioning, Sports
                                                 Conditioning.
                                         </p>
-                                        <a href="" class="button button--flex button--small project__button">
+                                        <a href="https://masaicult.herokuapp.com/" target="_blank" class="button button--flex button--small project__button">
                                          Demo  <i class="uil uil-arrow-right button__icon"></i>     
                                         </a>
                                 </div>
                             </div>
                           <!-- =====================  PROJECT 3 ===================== -->
-                             <div class="project__content grid swiper-slide">
+                             <!-- <div class="project__content grid swiper-slide">
                                 <img src="./Assets/Imgages/Project Cultfit.png" alt="" class="project__img">
                                 <div class="project__data">
                                         <h3 class="project__title">Clone of Cult.fit</h3>
@@ -462,7 +468,7 @@
                                          Demo  <i class="uil uil-arrow-right button__icon"></i>     
                                         </a>
                                 </div>
-                           </div> 
+                           </div>  -->
                         </div>
                         
 
@@ -558,13 +564,14 @@
                                 <div class="footer__container container grid">
                                         <div>
                                                 <h1 class="footer__title">Manthan</h1>
-                                                <span class="footer__subtitle">WEb devloper</span>
+                                                <span class="footer__subtitle">Web devloper</span>
                                         </div>
                                 </div>
 
+                               <div>
                                 <ul class="footer__links">
                                         <li>
-                                                <a href="#services" class="footer__link">services</a>
+                                                <a href="#education" class="footer__link">Education</a>
                                         </li>
                                         <li>
                                                 <a href="#project" class="footer__link">Project</a>
@@ -573,6 +580,7 @@
                                                 <a href="#contact" class="footer__link">Contactme</a>
                                         </li>
                                 </ul>
+                               </div>
 
                                 <div class="footer__social">
                                         <a href="#" target="_blank" class="footer__social">
@@ -585,7 +593,9 @@
                                                 <i class="uil uil-twitter-alt"></i>
                                         </a>
                                 </div>
-                                <p class="footer__copy">&#169; All right reserved</p>
+                                <div class="footer__copy">&#169; All right reserved</div>
+                              
+                               
                         </div>
                 </footer>
 
