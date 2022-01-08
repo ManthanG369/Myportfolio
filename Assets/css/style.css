@@ -409,7 +409,8 @@ img{
 }
 
 .about__description{
-        text-align: center;
+        text-align: justify;
+        /* justify-content: ; */
         margin-bottom: var(--mb-2-5);
 }
 
@@ -806,6 +807,7 @@ img{
 
   .home__blob{
           width: 180px;
+          margin-left: 2rem;
   }
 
   .skills__title{
@@ -923,7 +925,7 @@ img{
          }
 
          .home__container{
-                 row-gap: 5rem;
+                 row-gap: 3.5rem;
          }
 
          .home__content{
@@ -944,6 +946,9 @@ img{
                  margin-left: 3rem;
          }
 
+         .about{
+                 margin:1.7rem;
+         }
          .about__container{
                  column-gap: 5rem;
          }
@@ -958,6 +963,10 @@ img{
          .qualification__button{
                  margin: 0 var(--mb-1);
          }
+         .about__img{
+                /* border: 1px solid red; */
+                width:250px
+        }
 
 }
 /* For large devices */
@@ -992,8 +1001,8 @@ img{
                 grid-template-columns: repeat(2,1fr);
         }
 
-        .home__content{
-                border: 1px solid red;
-        }
+       
+
+        
 
 }
