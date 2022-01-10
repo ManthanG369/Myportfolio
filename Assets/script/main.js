@@ -54,47 +54,6 @@ skillsHeader.forEach((el)=>{
 })
 
 
-/* ==============Qualification tabs================ */
-var tabs=document.querySelectorAll('[data-content]')
-var tabContents=document.querySelectorAll('[data-content]')
-
-tabs.forEach((tab)=>{
-        tab.addEventListener('click',()=>{
-                var target=document.querySelector(tab.dataset.target)
-
-
-                tabContents.forEach(tabContents=>{
-                        tabContents.classList.remove('qualification__active')
-                })
-
-                target.classList.add('qualification__active')
-
-                tab.forEach(tab=>{
-                        tab.classList.remove('qualification__active')
-                })
-
-                tab.classList.add('qualification__active')
-        })
-})
-
-
-/* ==============Swiper ================ */
-
-var swiper =new Swiper('.project-container',{
-        cssMode:true,
-        navigation:{
-                nextE1:'.swiper-button-text',
-                prevE1:'.swiper-button-prev'
-        },
-
-        pagination:{
-                el:'.swiper-pagination'
-        },
-
-        mousewheel:true,
-        keyboard:true,
-});
-
 
 
 /* ============== Srcoll sections active link ================ */
@@ -163,6 +122,7 @@ themeButton.addEventListener('click', () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
+  
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())

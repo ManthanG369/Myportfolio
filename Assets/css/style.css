@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* ===================== Variables Css =====================*/
-:root{
+html{
 --header-height: 3rem;
 
 /* ===================== colors =====================*/
@@ -70,7 +70,7 @@
 };
         
 /* ===================== Varrable dark theme ===================== */
-body.dark-theme{
+.dark-theme{
    
 /* ===================== HSL color ===================== */
 
@@ -380,7 +380,7 @@ img{
         display: inline-block;
         background-color:var(--first-color);
         color: #FFF;
-        padding: 1rem;
+        padding: .5rem;
         border-radius: .5rem;
         font-weight: var(--font-medium);
 }
@@ -663,6 +663,7 @@ img{
 .project__title{
         font-size: var(--h3-font-size);
         margin-bottom: var(--mb-0-5);
+        /* text-align: center; */
 }
 
 .project__description{
@@ -673,6 +674,32 @@ img{
 .project__button:hover .button__icon{
         transform: translateX(.25rem);
 }
+
+.project__link-icon{
+        font-size: 2rem;
+        color:var(--first-color) ;
+        margin-left: 3rem;
+        align-self: center;
+}
+.project__techstack{
+        /* text-align: center; */
+        margin: .5rem;
+}
+
+.project__technology{
+        grid-template-columns: repeat(3,1fr);
+        gap: 0.5rem;
+        color: var(--first-color);
+        font-size: var(--font-medium);
+        text-align: center;
+}
+
+.project__source{
+        margin:.3rem;
+        display: flex;
+        justify-content: space-around;
+}
+
 /*==================== PROJECT IN MIND ====================*/
 
 
@@ -820,7 +847,7 @@ img{
   
 
   .project__img{
-          width: 200px;
+          width: 160px;
   }
 }
 
@@ -856,9 +883,13 @@ img{
                 justify-content:center ;
         }
 
-        .project__content{
+        /* .project__content{
              grid-template-columns: repeat(2,1fr);
              align-items: center;
+        } */
+
+        .project__container{
+                grid-template-columns: repeat(2,1fr);
         }
 
 }
