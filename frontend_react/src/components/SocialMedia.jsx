@@ -6,8 +6,8 @@ import { socialID } from "../constants";
 const SocialMedia = () => {
   return (
     <div className="app__social">
-      {socialID.map((item) => (
-        <div key={item}>
+      {socialID.map((item, index) => (
+        <div key={item + index}>
           <a href={item.iconUrl} target="_blank" rel="noopener noreferrer">
             {item.icon}
           </a>

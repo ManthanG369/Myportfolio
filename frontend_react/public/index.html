@@ -24,5 +24,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // Add the beforeunload event listener
+      window.addEventListener("blur", () => {
+        document.title = "👋 Goodbye! 👋";
+      });
+      window.addEventListener("focus", () => {
+        document.title = "Manthan Gaikwad";
+      });
+    </script>
   </body>
 </html>
