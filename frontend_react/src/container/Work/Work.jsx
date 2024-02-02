@@ -10,6 +10,7 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [filterTabs, setFilterTabs] = useState([]);
 
   useEffect(() => {
     const query = '*[_type=="works"]';
@@ -17,10 +18,41 @@ const Work = () => {
       console.log("data:", data);
       setWorks(data);
       setFilterWork(data);
+      setFilterTabs(extractTheTabs(data));
     });
   }, []);
 
-  const handleWorkFiller = (item) => {};
+  const extractTheTabs = (data) => {
+    let result = [];
+
+    data.forEach((item) => {
+      result = result.concat(item.tags.filter((tag) => tag !== "All"));
+    });
+
+    // Remove duplicates
+    result = [...new Set(result)];
+
+    // Add 'All' at the end
+    if (data.some((item) => item.tags.includes("All"))) {
+      result.push("All");
+    }
+
+    return result;
+  };
+
+  // ["React JS", "Angular", "Web App", "Mobile App", "All"];
+  const handleWorkFiller = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+      if (item === "All") {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
 
   return (
     <>
@@ -29,19 +61,17 @@ const Work = () => {
         section
       </h2>
       <div className="app__work-filter">
-        {["Ui/Ux/ ", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFiller(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {filterTabs.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFiller(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
