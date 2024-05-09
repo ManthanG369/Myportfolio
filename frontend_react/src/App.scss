@@ -189,3 +189,11 @@
     padding: 2rem;
   }
 }
+.app__footer {
+  padding: 2rem 0;
+  background-color: var(--secondary-color);
+  p {
+    font-weight: 500;
+    color: var(--white-color);
+  }
+}

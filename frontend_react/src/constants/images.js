@@ -35,11 +35,11 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import manthan from "../assets/manthan.png";
-import manthan1 from "../assets/manthan1.png";
+import manthan_logo from "../assets/Manthan_cursive.png";
 
 export default {
   manthan,
-  manthan1,
+  manthan_logo,
   email,
   mobile,
   api,
